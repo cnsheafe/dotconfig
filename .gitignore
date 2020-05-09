@@ -1,0 +1,14 @@
+Code - OSS/
+Electron/
+QtProject.conf
+Thunar
+VirtualBox
+chromium
+dconf
+pavucontrol.ini
+pulse
+vlc
+xfce4
+configstore
+powerline-shell/__pycache__
+
