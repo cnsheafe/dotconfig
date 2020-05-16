@@ -7,3 +7,14 @@ call plug#end()
 
 colorscheme dracula
 highlight Normal ctermbg=none
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set copyindent
+
+filetype on
+filetype plugin on
+
