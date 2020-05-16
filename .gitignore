@@ -11,4 +11,5 @@ vlc
 xfce4
 configstore
 powerline-shell/__pycache__
-
+nvim/data
+nvim/.netrwhist
