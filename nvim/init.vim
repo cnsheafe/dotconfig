@@ -3,6 +3,8 @@ syntax on
 
 call plug#begin('~/.config/nvim/data/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'fatih/vim-go'
+Plug 'valloric/youcompleteme'
 call plug#end()
 
 colorscheme dracula
