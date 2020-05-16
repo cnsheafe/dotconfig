@@ -5,6 +5,7 @@ call plug#begin('~/.config/nvim/data/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'fatih/vim-go'
 Plug 'valloric/youcompleteme'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 colorscheme dracula

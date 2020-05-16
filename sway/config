@@ -26,7 +26,7 @@ set $menu wofi
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output * bg ~/.local/share/backgrounds/blossom.jpg fill 
-#
+
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
@@ -112,6 +112,16 @@ font serif 11
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+
+    # Volume Control
+    set $VolumeUp   exec "pactl set-sink-volume @DEFAULT_SINK@ +10%" 
+    set $VolumeDown exec "pactl set-sink-volume @DEFAULT_SINK@ -10%"
+    set $VolumeMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+#
+    bindsym XF86AudioRaiseVolume    $VolumeUp
+    bindsym XF86AudioLowerVolume    $VolumeDown
+    bindsym XF86AudioMute           $VolumeMute
+
 #
 # Workspaces:
 #
