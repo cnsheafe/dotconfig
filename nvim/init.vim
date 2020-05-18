@@ -17,6 +17,7 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set copyindent
+set colorcolumn=80
 
 filetype on
 filetype plugin on
