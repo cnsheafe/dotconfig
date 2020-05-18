@@ -79,7 +79,6 @@ window#waybar.chromium {
 #idle_inhibitor,
 #mpd {
     padding: 0 10px;
-    margin: 0 4px;
     color: #ffffff;
 }
 
@@ -132,7 +131,8 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: #59dffc;
+    color: #323232;
 }
 
 #network.disconnected {
@@ -177,6 +177,7 @@ label:focus {
 
 #idle_inhibitor {
     background-color: #14151b;
+    min-width: 30px;
 }
 
 #idle_inhibitor.activated {
