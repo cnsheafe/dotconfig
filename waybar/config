@@ -10,8 +10,8 @@
         //"mpd",
         "idle_inhibitor",
         "pulseaudio",
-        "network",
         "clock"
+        // "network",
         //"tray"
     ],
     // Modules configuration
@@ -115,8 +115,8 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "  {essid}:{ipaddr}",
-        "format-ethernet": " {ipaddr}",
+        "format-wifi": "  {essid}",
+        "format-ethernet": " ",
         "format-linked": "{}{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "tooltip": false
@@ -124,7 +124,7 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {desc}",
-        "format-bluetooth": "{icon} {desc}",
+        "format-bluetooth": "{icon}",
         "format-bluetooth-muted": " {desc}",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",

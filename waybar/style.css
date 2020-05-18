@@ -78,12 +78,13 @@ window#waybar.chromium {
 #mode,
 #idle_inhibitor,
 #mpd {
-    padding: 0 10px;
+    padding: 0 4px;
     color: #ffffff;
+    background-color: #323232;
 }
 
 #clock {
-    background-color: #64727D;
+    padding-right: 10px;
 }
 
 #battery {
@@ -131,8 +132,6 @@ label:focus {
 }
 
 #network {
-    background-color: #59dffc;
-    color: #323232;
 }
 
 #network.disconnected {
@@ -140,13 +139,9 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #ebf85b;
-    color: #323232;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
 }
 
 #custom-media {
@@ -176,13 +171,10 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #14151b;
-    min-width: 30px;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    color: #caa9fa;
 }
 
 #mpd {
