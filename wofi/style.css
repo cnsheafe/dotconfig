@@ -1,3 +1,31 @@
+window {
+    border-radius: 10px;
+}
+
+#outer-box {
+    background-color: #323232;
+    border-radius: 10px 10px 0 0;
+    padding-bottom: 4px;
+}
+
+#input {
+    border-color: transparent;
+}
+
+#input:focused {
+    border-color: #caa9fa;
+    border-radius: 0;
+}
+
+#entry {
+    background-color: #323232;
+}
+
+#entry:selected {
+    background-color: #4d5b86;
+    outline: none;
+}
+
 #img {
 	margin-right: 8px;
 }

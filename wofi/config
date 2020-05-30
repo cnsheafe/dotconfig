@@ -10,4 +10,5 @@ insensitive=true
 allow_images=true
 key_forward=NULL
 key_expand=Tab
+no_actions=true
 
