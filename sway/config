@@ -234,9 +234,9 @@ bar {
 #    }
 }
 
-# Windows
+# Windows | border | background | text | indicator | child_border
 default_border pixel 2
-client.focused 		    #44475a #44475a #f8f8f2 #4d5b86 #4d5b86
+client.focused 		    #44475a #bd84e0 #f8f8f2 #4d5b86 #4d5b86
 client.focused_inactive #282A36 #4D4D4D #F8F8F2 #4D4D4D #282A36
 client.unfocused        #282a36 #282A36 #e6e6d1 #282A36 #282A36
 client.urgent           #282A36 #FF5555 #F8F8F2 #FF5555 #282A36
