@@ -1,3 +1,7 @@
+#window {
+    background-color: transparent;
+}
+
 #input {
     border-color: transparent;
     background-color: #6147d6;
@@ -15,7 +19,6 @@
 
 #entry {
     background-color: #7a64dc;
-
 }
 
 #entry:selected {
