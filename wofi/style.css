@@ -12,7 +12,7 @@
     border-bottom-right-radius: 0px;
 }
 
-#input:focused {
+#input:focus {
     border-color: #caa9fa;
     color: white;
 }
