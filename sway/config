@@ -251,3 +251,4 @@ smart_borders on
 smart_gaps on
 
 include /etc/sway/config.d/*
+exec "systemctl --user import-environment"
