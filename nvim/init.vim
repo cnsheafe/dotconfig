@@ -7,6 +7,9 @@ Plug 'fatih/vim-go'
 Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-fugitive'
 Plug 'mattn/emmet-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'HerringtonDarkholme/yats'
+Plug 'othree/yajs.vim'
 call plug#end()
 
 colorscheme dracula
@@ -23,6 +26,12 @@ set colorcolumn=80
 
 filetype on
 filetype plugin on
+
+" Use different color for open and closing tag when highlighted
+let g:vim_jsx_pretty_highlight_close_tag = 1
+
+" Fix performance issues for yats
+set re=0
 
 " Emmet mode options are (n)ormal, (i)nsert (v)isual, or (a) for all
 let g:user_emmet_mode='inv'
