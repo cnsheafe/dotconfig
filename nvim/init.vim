@@ -23,6 +23,7 @@ set expandtab
 set autoindent
 set copyindent
 set colorcolumn=80
+" set clipboard=unnamedplus
 
 filetype on
 filetype plugin on

@@ -5,7 +5,7 @@ font:
   bold:
     family: Fira Code
     style: Bold
-  size: 11.5
+  size: 10
       
 # Colors (Dracula)
 colors:
