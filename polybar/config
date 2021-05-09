@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #26D8DFDF
+background = #00D8DFDF
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -36,9 +36,8 @@ modules-left = i3
 modules-right = date
 font-0 = "Fira Code:pixelsize=10:weight=bold;0"
 line-size = 3
-module-margin-right = 1
 
-;;Color Theme for the polybar
+;; Color theme for the polybar
 background = ${colors.background}
 tray-background = ${colors.background}
 
@@ -276,7 +275,7 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = "%a %b%e"
+date = "%a %b%e "
 date-alt = "%m-%d-%Y"
 
 time = "%l:%M%p"
@@ -286,7 +285,7 @@ format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
-label = %date%%time%
+label = " %date%%time% "
 
 [module/pulseaudio]
 type = internal/pulseaudio

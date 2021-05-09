@@ -179,7 +179,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# gaps
+# Gaps https://github.com/Airblader/i3
 for_window [class=".*"] border pixel 0
 set $gap_width 8
 gaps inner $gap_width
@@ -194,12 +194,14 @@ smart_borders on
 #         status_command i3status
 # }
 
-# Polybar - status bar
+# Polybar - system bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Startup MozillaVPN automatically
 exec_always --no-startup-id mozillavpn activate
+# Startup Dropbox Daemon automatically
+exec_always --no-startup-id $HOME/.dropbox-dist/dropboxd
 # Set background
-exec_always --no-startup-id feh --bg-scale $HOME/.local/share/backgrounds/cottoncandy.jpg
+exec_always --no-startup-id feh --bg-fill $HOME/.local/share/backgrounds/blue-red-wide.jpg $HOME/.local/share/backgrounds/drop-tall.jpg
 # Enable compositing effects like opacity and blurring
 exec_always --no-startup-id picom -b
 

@@ -25,3 +25,5 @@ application/x-extension-shtml=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
+image/jpeg=shotwell-viewer.desktop;feh.desktop;google-chrome.desktop;
+text/plain=nvim.desktop;Alacritty.desktop;vim.desktop;
