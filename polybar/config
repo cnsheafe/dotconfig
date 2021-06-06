@@ -21,7 +21,8 @@
 background = #00D8DFDF
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+;foreground = #dfdfdf
+foreground = #ffffff
 foreground-alt = #555
 primary = #ffffff
 secondary = #e60053
@@ -33,8 +34,11 @@ override-redirect = false
 width = 100%
 height = 24
 modules-left = i3
-modules-right = date
+modules-right = pulseaudio date
 font-0 = "Fira Code:pixelsize=10:weight=bold;0"
+#font-1 = "Noto Sans Moto:fontformat=truetype:size=8:antialias=false;0"
+font-1 = "Noto Sans Moto:fontformat=truetype:pixelsize=10:weight=500;0"
+font-2 = "Fira Code:pixelsize=10;1"
 line-size = 3
 
 ;; Color theme for the polybar
@@ -257,19 +261,21 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = moz0
+interface = enp0s31f6
 interval = 3.0
 
+format-connected = <label-connected>
 format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+label-connected = %downspeed%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
+;
 
 [module/date]
 type = internal/date
@@ -281,7 +287,7 @@ date-alt = "%m-%d-%Y"
 time = "%l:%M%p"
 time-alt = " %H:%M:%S"
 
-format-prefix = 
+format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
@@ -289,35 +295,42 @@ label = " %date%%time% "
 
 [module/pulseaudio]
 type = internal/pulseaudio
+format-underline = #ffffff
 
-format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume>
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
+label-volume-underline = ${colors.foreground}
 
 label-muted = 🔇 muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+bar-volume-foreground-0 = ${colors.foreground} 
+bar-volume-foreground-1 = ${colors.foreground} 
+bar-volume-foreground-2 = ${colors.foreground} 
+bar-volume-foreground-3 = ${colors.foreground} 
+bar-volume-foreground-4 = ${colors.foreground} 
+bar-volume-foreground-5 = ${colors.foreground} 
+bar-volume-foreground-6 = ${colors.foreground} 
 bar-volume-gradient = false
-bar-volume-indicator = |
+bar-volume-indicator = 🞅 
 bar-volume-indicator-font = 2
-bar-volume-fill = ─
+bar-volume-indicator-foreground = ${colors.foreground-alt}
+bar-volume-fill = "🞊 "
 bar-volume-fill-font = 2
-bar-volume-empty = ─
+bar-volume-empty =" 🞅"
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
+ramp-volume-0 = "🔈"
+ramp-volume-1 = "🔉"
+ramp-volume-2 = "🔊"
+
 
 [module/alsa]
 type = internal/alsa
 
-format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume> <ramp-volume>
 label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
@@ -334,13 +347,17 @@ bar-volume-foreground-4 = #55aa55
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
-bar-volume-indicator = |
+#bar-volume-indicator = |
 bar-volume-indicator-font = 2
 bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
+ramp-volume-0 = " "
+ramp-volume-1 = ""
+ramp-volume-2 = ""
+
 
 [module/battery]
 type = internal/battery
@@ -397,11 +414,11 @@ ramp-foreground = ${colors.foreground-alt}
 [module/powermenu]
 type = custom/menu
 
-expand-right = true
+expand-right = false 
 
 format-spacing = 1
 
-label-open = 
+label-open = " ⏻ "
 label-open-foreground = ${colors.secondary}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}

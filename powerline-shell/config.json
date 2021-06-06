@@ -9,9 +9,6 @@
     "root",
     "newline"
   ],
-  "cwd": {
-	  "max_depth": 3
-  },
   "vcs": {
 	  "show_symbol": true
   },

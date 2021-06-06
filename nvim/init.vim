@@ -6,10 +6,12 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'fatih/vim-go'
 Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'HerringtonDarkholme/yats'
 Plug 'othree/yajs.vim'
+Plug 'kien/ctrlp.vim'
 call plug#end()
 
 colorscheme dracula
@@ -29,7 +31,7 @@ filetype on
 filetype plugin on
 
 " Use different color for open and closing tag when highlighted
-let g:vim_jsx_pretty_highlight_close_tag = 1
+let g:vim_jsx_pretty_highlight_close_tag = 0
 
 " Fix performance issues for yats
 set re=0
