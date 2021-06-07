@@ -147,7 +147,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # assign programs to workspace
-for_window [class="^Spotify"] move to workspace $ws3
+# for_window [class="^Spotify"] move to workspace $ws3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -183,14 +183,27 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Titlebar decoration
+title_align left
+default_border none
+
 # Gaps https://github.com/Airblader/i3
 for_window [class=".*"] border pixel 0
-set $gap_width 8
+for_window [class=".*"] title_format <span> %title</span>
+set $gap_width 4
 gaps inner $gap_width
-gaps top -$gap_width
+gaps top 0
 gaps horizontal -$gap_width
 gaps bottom -$gap_width
 smart_borders on
+smart_gaps on
+
+# Colors
+# class                 border  backgr. text    indicator   childborder            
+client.focused          #282a36 #4d4d4d #ffffff #2e9ef4     #ffffff
+client.unfocused        #282a36 #282a36 #ffffff #2e9ef4     #ffffff
+client.focused_inactive #282a36 #282a36 #ffffff #484e50     #5f676a
+client.urgent           #2f343a #900000 #ffffff #900000     #900000
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -207,5 +220,5 @@ exec_always --no-startup-id $HOME/.dropbox-dist/dropboxd
 # Set background
 exec_always --no-startup-id feh --bg-fill $HOME/.local/share/backgrounds/blue-red-wide.jpg $HOME/.local/share/backgrounds/drop-tall.jpg
 # Enable compositing effects like opacity and blurring
-# exec_always --no-startup-id picom -b
+exec_always --no-startup-id picom -b
 
