@@ -221,4 +221,6 @@ exec_always --no-startup-id $HOME/.dropbox-dist/dropboxd
 exec_always --no-startup-id feh --bg-fill $HOME/.local/share/backgrounds/blue-red-wide.jpg $HOME/.local/share/backgrounds/drop-tall.jpg
 # Enable compositing effects like opacity and blurring
 exec_always --no-startup-id picom -b
+# Startup redshift
+exec_always --no-startup-id redshift
 
