@@ -12,6 +12,8 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'HerringtonDarkholme/yats'
 Plug 'othree/yajs.vim'
 Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf'
 call plug#end()
 
 colorscheme dracula
