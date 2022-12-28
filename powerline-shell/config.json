@@ -6,11 +6,10 @@
     "git",
     "hg",
     "jobs",
-    "root",
-    "newline"
+    "root"
   ],
   "vcs": {
-	  "show_symbol": true
+    "show_symbol": true
   },
   "theme": "~/.config/powerline-shell/theme.py"
 }

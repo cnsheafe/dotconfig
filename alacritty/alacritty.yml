@@ -1,27 +1,27 @@
 font:
   normal:
     family: Fira Code
-    # style has to be a string: Light, Regular, Medium, Bold
+      # style has to be a string: Light, Regular, Medium, Bold
     style: Medium
   bold:
     family: Fira Code
     style: Bold
-  size: 8.5 
-      
-# Colors (Dracula)
+    size: 8
+
+      # Colors (Dracula)
 colors:
   # Default colors
   primary:
     background: '0x282a36'
     foreground: '0xf8f8f2'
 
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not present.
-    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-    # is `false`, the normal foreground color will be used.
-    #dim_foreground: '0x9a9a9a'
-    #bright_foreground: '0xffffff'
+  # Bright and dim foreground colors
+  #
+  # The dimmed foreground color is calculated automatically if it is not present.
+  # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
+  # is `false`, the normal foreground color will be used.
+  #dim_foreground: '0x9a9a9a'
+  #bright_foreground: '0xffffff'
 
   # Cursor colors
   #
@@ -77,8 +77,7 @@ colors:
   #
   indexed_colors: []
 
+
 window:
-  padding:
-    x: 10
-    y: 10
+  padding: { x: 10, y: 10 }
 
