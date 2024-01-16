@@ -3,26 +3,29 @@ syntax on
 
 call plug#begin('~/.config/nvim/data/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
-" Plug 'fatih/vim-go'
-" Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'HerringtonDarkholme/yats'
-" Plug 'othree/yajs.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf'
 Plug 'raimondi/delimitmate'
 Plug 'chiel92/vim-autoformat'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'tpope/vim-cucumber'
+Plug 'eslint/eslint'
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', {
+    \ 'do': 'yarn install --frozen-lockfile --production',
+    \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 call plug#end()
 
 colorscheme dracula
 " Use terminal background color
 highlight Normal ctermbg=none
 
+set mouse=n
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -32,8 +35,7 @@ set copyindent
 set colorcolumn=80
 " set clipboard=unnamedplus
 
-filetype on
-filetype plugin on
+filetype plugin indent on
 
 " Use different color for open and closing tag when highlighted
 let g:vim_jsx_pretty_highlight_close_tag = 0
