@@ -53,6 +53,8 @@ let g:vim_jsx_pretty_highlight_close_tag = 0
 " Fix performance issues for yats
 set re=0
 
+autocmd Filetype cucumber setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType json syntax match Comment +\/\/.\+$+
 autocmd FileType typescript let b:coc_root_patterns=["yarn.lock", "npm.lock"]
 " Format on file save
 " au BufWrite * :Autoformat
