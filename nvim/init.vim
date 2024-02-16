@@ -35,6 +35,14 @@ set copyindent
 set colorcolumn=80
 " set clipboard=unnamedplus
 
+" [buffer number] followed by filename:
+set statusline=[%n]\ %t
+" for Syntastic messages:
+set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+" show line#:column# on the right hand side
+set statusline+=%=%l:%c
 filetype plugin indent on
 
 " Use different color for open and closing tag when highlighted
