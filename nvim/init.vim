@@ -74,7 +74,7 @@ let g:ycm_clangd_uses_ycmd_caching = 0
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <C-o> :NERDTreeFind<CR>
 
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -105,6 +105,7 @@ endif
 
 " GoTo code navigation
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gD :call CocAction('jumpDefinition', 'vsplit')<CR>
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
