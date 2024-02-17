@@ -7,7 +7,7 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+set $mod Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -21,17 +21,22 @@ set $term alacritty
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 set $menu wofi
 
+exec dunst
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg ~/.local/share/backgrounds/cottoncandy.jpg fill 
+output * bg ~/.local/share/backgrounds/blossom.jpg fill 
 
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+output DP-3 pos 0 0 transform 270 
+output HDMI-A-5 pos 1080 400
+focus output HDMI-A-5
 
 ### Idle configuration
 #
@@ -61,7 +66,7 @@ output * bg ~/.local/share/backgrounds/cottoncandy.jpg fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-font serif 11
+font pango:Fira Code 10
 
 ### Key bindings
 #
